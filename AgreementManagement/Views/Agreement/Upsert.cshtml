@@ -1,0 +1,108 @@
+﻿@model Models.ViewModel.AgreementVM
+@{
+    ViewData["Title"] = "Upsert";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var title = "Create New Agreement";
+}
+<form method="post">
+    <div class="row p-3 border">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        @if (Model.ModelId != 0)
+        {
+            title = "Update Agreement";
+        }
+
+        <div class="hide">
+            <input asp-for="Agreement.Id" class="form-control" hidden />
+            <span asp-validation-for="Agreement.Id" class="text-danger"></span>
+        </div>
+
+        <div class="col-12 border-bottom">
+            <h2 class="text-dark">@title</h2>
+        </div>
+        <div class="col-8 pt-4">
+            <div class="form-group row">
+                <div class="col-4 p-3">
+                    <label asp-for="Agreement.ProductGroup"></label>
+                </div>
+                <div class="col-8 p-3">
+                    <div class="col-8  p-3">
+                        <div class="col-8 p-3">
+                            @Html.DropDownListFor(m => m.Agreement.ProductGroupId, Model.ProductGroups, "-Select a Product Group", new { @class = "form-control" })
+                            <span asp-validation-for="Agreement.ProductGroup" class="text-danger"></span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 p-3">
+                    <label class="align-content-center" asp-for="Agreement.Product"></label>
+                </div>
+                <div class="col-8 p-3">
+                    <div class="col-8  p-3">
+                        <div class="col-8 p-3">
+                            @Html.DropDownListFor(m => m.Agreement.ProductId, Model.Products, "-Select a Product ", new { @class = "form-control" })
+                            <span asp-validation-for="Agreement.Product" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 p-3">
+                    <label class="align-content-center" asp-for="Agreement.EffectiveDate"></label>
+                </div>
+                <div class="col-8  p-3">
+                    <div class="col-8  p-3">
+                        <input type="text" asp-for="Agreement.EffectiveDate" placeholder="Date to" autocomplete="none" class="datepicker d-block ms-1 float-end" id="effective_date">
+                        <span asp-validation-for="Agreement.EffectiveDate" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-4 p-3">
+                    <label asp-for="Agreement.ExpirationDate"></label>
+                </div>
+                <div class="col-8  p-3">
+                    <div class="col-8  p-3">
+                        <input asp-for="Agreement.ExpirationDate" type="text" placeholder="Date to" autocomplete="none" class="datepicker d-block ms-1 float-end" id="expiration_date">
+                        <span asp-validation-for="Agreement.ExpirationDate" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-4 p-3">
+                    <label asp-for="Agreement.NewPrice"></label>
+                </div>
+                <div class="col-8 p-3">
+                    <input asp-for="Agreement.NewPrice" class="form-control" />
+                    <span asp-validation-for="Agreement.NewPrice" class="text-danger"></span>
+                </div>
+                <div class="col-4 p-3">
+                    <label asp-for="Agreement.Product.Active"></label>
+                </div>
+                <div class="checkbox">
+                    <label asp-for="Agreement.Product.Active">
+                        <input asp-for="Agreement.Product.Active" />
+                    </label>
+                </div>
+            </div>
+            <div>
+                <div class="form-group row">
+                    <div class="col-8 offset-4">
+                        @if (Model.ModelId != 0)
+                        {
+                            <partial name="_EditAndBackToListButton" model="Model.Agreement.Id" />
+                        }
+                        else
+                        {
+                            <partial name="_CreateAndBackToListButton" />
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+@section Scripts{
+    <script src="~/js/datapicker.js"></script>
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
