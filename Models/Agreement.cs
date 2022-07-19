@@ -27,6 +27,8 @@ namespace Models
         [DataType(DataType.Date)]
         public DateTime ExpirationDate { get; set; }
         public float ProductPrice { get; set; }
+
+        [DataType(DataType.Currency)]
         public float NewPrice { get; set; }
     }
 }

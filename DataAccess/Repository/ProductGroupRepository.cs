@@ -1,6 +1,7 @@
 ﻿using DataAccess.Data;
 using DataAccess.Repository.IRepository;
 using Models;
+using System.Linq;
 
 namespace DataAccess.Repository
 {
@@ -14,7 +15,13 @@ namespace DataAccess.Repository
 
         public void Update(ProductGroup productGroup)
         {
-
+            var objFromDb = _db.ProductGroups.FirstOrDefault(s => s.Id == productGroup.Id);
+            if (objFromDb != null)
+            {
+                objFromDb.Active = productGroup.Active;
+                objFromDb.GroupCode= productGroup.GroupCode;
+                objFromDb.GroupDescription= productGroup.GroupDescription;
+            }
         }
     }
 }

@@ -13,10 +13,34 @@ function loadDataTable() {
             { "data": "user.userName", "width": "60px" },
             { "data": "productGroup.groupCode", "width": "60px" },
             { "data": "product.productNumber", "width": "60px" },
-            { "data": "effectiveDate", "width": "60px" },
-            { "data": "expirationDate", "width": "60px" },
-            { "data": "productPrice", "width": "60px" },
-            { "data": "newPrice", "width": "60px" },
+            {
+                'data': 'effectiveDate',
+                'render': function (jsonDate) {
+                    var date = new Date(parseInt(jsonDate.substr(6)));
+                    var month = ("0" + (date.getMonth() + 1)).slice(-2);
+                    return ("0" + date.getDate()).slice(-2) + '-' + month + '-' + date.getFullYear();
+                }
+            },
+            {
+                'data': 'expirationDate',
+                'render': function (jsonDate) {
+                    var date = new Date(parseInt(jsonDate.substr(6)));
+                    var month = ("0" + (date.getMonth() + 1)).slice(-2);
+                    return ("0" + date.getDate()).slice(-2) + '-' + month + '-' + date.getFullYear();
+                }
+            },
+            {
+                "data": "productPrice", "width": "60px",
+                'render': function (price) {
+                    return '$' + price;
+                }
+            },
+            {
+                "data": "newPrice", "width": "60px",
+                'render': function (price) {
+                    return '$' + price;
+                }
+            },
             {
                 "data": "id",
                 "render": function (data) {

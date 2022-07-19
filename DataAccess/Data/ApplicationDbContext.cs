@@ -26,7 +26,8 @@ namespace DataAccess.Data
 
             ApplicationUser user = new ApplicationUser()
             {
-                Id = "b74ddd14-6340-4840-95c2-db12554843e5",
+                //we can use other types for id(IdentityUser<Guid>)
+                Id = Guid.NewGuid().ToString(),
                 UserName = "Admin",
                 Email = "admin@gmail.com",
                 LockoutEnabled = false,

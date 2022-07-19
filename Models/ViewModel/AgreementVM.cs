@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Models.ViewModel
 {
@@ -12,8 +6,7 @@ namespace Models.ViewModel
     {
         public int ModelId { get; set; }
         public Agreement Agreement { get; set; }
-        public IEnumerable<SelectListItem> ProductGroups { get; set; }
-        public IEnumerable<SelectListItem> Products { get; set; }
-
+        public SelectList ProductGroups { get; set; }
+        public SelectList Products { get; set; }
     }
 }

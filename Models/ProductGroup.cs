@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Models
 {
@@ -7,6 +8,7 @@ namespace Models
         [Key]
         public int Id { get; set; }
         public string GroupDescription { get; set; }
+        [DisplayName("Product Group Code")]
         public int GroupCode { get; set; }
         public bool Active { get; set; }
     }

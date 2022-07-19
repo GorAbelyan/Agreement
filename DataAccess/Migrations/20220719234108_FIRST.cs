@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DataAccess.Migrations
 {
-    public partial class dsgsdg : Migration
+    public partial class FIRST : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -231,7 +231,7 @@ namespace DataAccess.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Discriminator", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "b74ddd14-6340-4840-95c2-db12554843e5", 0, "e8093303-0ad4-4554-a8c3-0369ab377026", "ApplicationUser", "admin@gmail.com", false, false, null, null, null, "AQAAAAEAACcQAAAAECxOoRWKq1umg1nD5MNKKc7qQuiiDx/O0m3wSFG8Edz2UT3ehMhfY2YJswWTtAY1Gg==", "1234567890", false, "a81d2b7c-ddfe-4378-991f-889b4d43d4ea", false, "Admin" });
+                values: new object[] { "ccd54b0c-d45d-4274-977a-7285e52fe3d3", 0, "d7958232-0a3c-4889-9ecd-3dfee8cfd168", "ApplicationUser", "admin@gmail.com", false, false, null, null, null, "AQAAAAEAACcQAAAAED0AdEDoVgfPdTtZIU/5vJ/Y4s5jf2fAXyzyKDmc4J8DU5K0zIuoHNn5bFZfeCLlJA==", "1234567890", false, "19bcb3e6-11a6-47f0-9fa8-4a5d50eb1105", false, "Admin" });
 
             migrationBuilder.InsertData(
                 table: "ProductGroups",
@@ -251,12 +251,12 @@ namespace DataAccess.Migrations
             migrationBuilder.InsertData(
                 table: "Agreements",
                 columns: new[] { "Id", "EffectiveDate", "ExpirationDate", "NewPrice", "ProductGroupId", "ProductId", "ProductPrice", "UserId" },
-                values: new object[] { 1, new DateTime(2022, 7, 16, 19, 8, 11, 549, DateTimeKind.Local).AddTicks(8345), new DateTime(2022, 7, 18, 19, 8, 11, 550, DateTimeKind.Local).AddTicks(8937), 200f, 1, 1, 300f, "b74ddd14-6340-4840-95c2-db12554843e5" });
+                values: new object[] { 1, new DateTime(2022, 7, 20, 3, 41, 7, 552, DateTimeKind.Local).AddTicks(4727), new DateTime(2022, 7, 22, 3, 41, 7, 553, DateTimeKind.Local).AddTicks(6356), 200f, 1, 1, 300f, "ccd54b0c-d45d-4274-977a-7285e52fe3d3" });
 
             migrationBuilder.InsertData(
                 table: "Agreements",
                 columns: new[] { "Id", "EffectiveDate", "ExpirationDate", "NewPrice", "ProductGroupId", "ProductId", "ProductPrice", "UserId" },
-                values: new object[] { 2, new DateTime(2022, 7, 16, 19, 8, 11, 551, DateTimeKind.Local).AddTicks(1063), new DateTime(2022, 7, 18, 19, 8, 11, 551, DateTimeKind.Local).AddTicks(1071), 200f, 1, 1, 300f, "b74ddd14-6340-4840-95c2-db12554843e5" });
+                values: new object[] { 2, new DateTime(2022, 7, 20, 3, 41, 7, 553, DateTimeKind.Local).AddTicks(8699), new DateTime(2022, 7, 22, 3, 41, 7, 553, DateTimeKind.Local).AddTicks(8705), 200f, 1, 1, 300f, "ccd54b0c-d45d-4274-977a-7285e52fe3d3" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Agreements_ProductGroupId",

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220716150812_dsgsdg")]
-    partial class dsgsdg
+    [Migration("20220719234108_FIRST")]
+    partial class FIRST
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -265,24 +265,24 @@ namespace DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            EffectiveDate = new DateTime(2022, 7, 16, 19, 8, 11, 549, DateTimeKind.Local).AddTicks(8345),
-                            ExpirationDate = new DateTime(2022, 7, 18, 19, 8, 11, 550, DateTimeKind.Local).AddTicks(8937),
+                            EffectiveDate = new DateTime(2022, 7, 20, 3, 41, 7, 552, DateTimeKind.Local).AddTicks(4727),
+                            ExpirationDate = new DateTime(2022, 7, 22, 3, 41, 7, 553, DateTimeKind.Local).AddTicks(6356),
                             NewPrice = 200f,
                             ProductGroupId = 1,
                             ProductId = 1,
                             ProductPrice = 300f,
-                            UserId = "b74ddd14-6340-4840-95c2-db12554843e5"
+                            UserId = "ccd54b0c-d45d-4274-977a-7285e52fe3d3"
                         },
                         new
                         {
                             Id = 2,
-                            EffectiveDate = new DateTime(2022, 7, 16, 19, 8, 11, 551, DateTimeKind.Local).AddTicks(1063),
-                            ExpirationDate = new DateTime(2022, 7, 18, 19, 8, 11, 551, DateTimeKind.Local).AddTicks(1071),
+                            EffectiveDate = new DateTime(2022, 7, 20, 3, 41, 7, 553, DateTimeKind.Local).AddTicks(8699),
+                            ExpirationDate = new DateTime(2022, 7, 22, 3, 41, 7, 553, DateTimeKind.Local).AddTicks(8705),
                             NewPrice = 200f,
                             ProductGroupId = 1,
                             ProductId = 1,
                             ProductPrice = 300f,
-                            UserId = "b74ddd14-6340-4840-95c2-db12554843e5"
+                            UserId = "ccd54b0c-d45d-4274-977a-7285e52fe3d3"
                         });
                 });
 
@@ -385,16 +385,16 @@ namespace DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "b74ddd14-6340-4840-95c2-db12554843e5",
+                            Id = "ccd54b0c-d45d-4274-977a-7285e52fe3d3",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e8093303-0ad4-4554-a8c3-0369ab377026",
+                            ConcurrencyStamp = "d7958232-0a3c-4889-9ecd-3dfee8cfd168",
                             Email = "admin@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAECxOoRWKq1umg1nD5MNKKc7qQuiiDx/O0m3wSFG8Edz2UT3ehMhfY2YJswWTtAY1Gg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAED0AdEDoVgfPdTtZIU/5vJ/Y4s5jf2fAXyzyKDmc4J8DU5K0zIuoHNn5bFZfeCLlJA==",
                             PhoneNumber = "1234567890",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a81d2b7c-ddfe-4378-991f-889b4d43d4ea",
+                            SecurityStamp = "19bcb3e6-11a6-47f0-9fa8-4a5d50eb1105",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });

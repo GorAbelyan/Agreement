@@ -4,6 +4,5 @@ namespace Models
 {
     public class ApplicationUser : IdentityUser
     {
-
     }
 }
